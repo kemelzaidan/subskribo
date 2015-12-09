@@ -1,5 +1,5 @@
 <div id="content" class="col-md-12 centered">
-  <div id="left-colum" class="ls-box col-md-6">
+  <div id="left-colum" class="ls-box col-md-6 col">
     <form action="" class="ls-form row">
       <fieldset>
         <label class="ls-label col-md-10">
@@ -34,29 +34,35 @@
     </form>
   </div>
 
-  <div id="right-colum" class="col-md-6 ls-box">
-    <ul class="ls-tabs-nav">
-      <li class="ls-active"><a data-ls-module="tabs" href="#locaweb-sig">Locaweb</a></li>
-      <li><a data-ls-module="tabs" href="#locawebcorp-sig">Locaweb Corp</a></li>
-      <li><a data-ls-module="tabs" href="#allin-sig">AllIn</a></li>
-    </ul>
-    <div class="ls-tabs-container">
-      {{!-- template de assinatura da locaweb --}}
-      <div id="locaweb-sig" class="ls-tab-content ls-active">
-        {{locaweb-signature dados = model}}
-      </div>
+  <div id="right-colum" class="col-md-6 ls-box col">
+    <div id="tabs-section">
+      <ul class="ls-tabs-nav">
+        <li class="ls-active"><a data-ls-module="tabs" href="#locaweb-sig">Locaweb</a></li>
+        <li><a data-ls-module="tabs" href="#locawebcorp-sig">Locaweb Corp</a></li>
+        <li><a data-ls-module="tabs" href="#allin-sig">AllIn</a></li>
+      </ul>
+      <div class="ls-tabs-container">
+        {{!-- template de assinatura da locaweb --}}
+        <div id="locaweb-sig" class="ls-tab-content ls-active">
+          {{locaweb-signature dados = model}}
+        </div>
 
-      {{!-- template de assinatura da locaweb corp--}}
-      <div id="locawebcorp-sig" class="ls-tab-content">
-        {{locawebcorp-signature dados = model}}
-      </div>
+        {{!-- template de assinatura da locaweb corp--}}
+        <div id="locawebcorp-sig" class="ls-tab-content">
+          {{locawebcorp-signature dados = model}}
+        </div>
 
-      {{!-- template de assinatura da locaweb corp--}}
-      <div id="allin-sig" class="ls-tab-content">
-        {{allin-signature dados = model}}
+        {{!-- template de assinatura da locaweb corp--}}
+        <div id="allin-sig" class="ls-tab-content">
+          {{allin-signature dados = model}}
+        </div>
       </div>
-
     </div>
+
+    <a href="#" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência">Copiar
+      <img class="ico" src="Octicons-clippy.svg" alt="Copiar para a Área de transferência">
+    </a>
+
   </div>
 </div>
 
