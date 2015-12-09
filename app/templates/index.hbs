@@ -1,0 +1,63 @@
+<div id="content" class="col-md-12 centered">
+  <div id="left-colum" class="ls-box col-md-6">
+    <form action="" class="ls-form row">
+      <fieldset>
+        <label class="ls-label col-md-10">
+          <b class="ls-label-text">Nome</b>
+          {{input type="text" value=model.nome autofocus=true pattern="gororoba" placeholder="Nome e sobrenome"}}
+        </label>
+        <label class="ls-label col-md-10">
+          <b class="ls-label-text">Cargo</b>
+          {{input type="text" value=model.cargo placeholder="Cargo ou função"}}
+        </label>
+        <label class="ls-label col-md-10">
+          <b class="ls-label-text">Email</b>
+          {{input type="text" value=model.email placeholder="email corporativo"}}
+        </label>
+        <label class="ls-label col-md-6">
+          <b class="ls-label-text">Telefone</b>
+          {{input type="text" value=model.telefone placeholder="Telefone fixo"}}
+        </label>
+        <label class="ls-label col-md-6">
+          <b class="ls-label-text">Ramal</b>
+          {{input type="text" value=model.ramal placeholder="ramal"}}
+        </label>
+        <label class="ls-label col-md-6">
+          <b class="ls-label-text">Celular</b>
+          {{input type="text" value=model.celular placeholder="telefone móvel"}}
+        </label>
+        <label class="ls-label col-md-6">
+          <b class="ls-label-text">Skype</b>
+          {{input type="text" value=model.skype placeholder="telefone móvel"}}
+        </label>
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="right-colum" class="col-md-6 ls-box">
+    <ul class="ls-tabs-nav">
+      <li class="ls-active"><a data-ls-module="tabs" href="#locaweb-sig">Locaweb</a></li>
+      <li><a data-ls-module="tabs" href="#locawebcorp-sig">Locaweb Corp</a></li>
+      <li><a data-ls-module="tabs" href="#allin-sig">AllIn</a></li>
+    </ul>
+    <div class="ls-tabs-container">
+      {{!-- template de assinatura da locaweb --}}
+      <div id="locaweb-sig" class="ls-tab-content ls-active">
+        {{locaweb-signature dados = model}}
+      </div>
+
+      {{!-- template de assinatura da locaweb corp--}}
+      <div id="locawebcorp-sig" class="ls-tab-content">
+        {{locawebcorp-signature dados = model}}
+      </div>
+
+      {{!-- template de assinatura da locaweb corp--}}
+      <div id="allin-sig" class="ls-tab-content">
+        {{allin-signature dados = model}}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{{outlet}}
