@@ -1,68 +1,109 @@
-<div id="content" class="col-md-12 centered">
-  <div id="left-colum" class="ls-box col-md-6 col">
-    <form action="" class="ls-form row">
-      <fieldset>
-        <label class="ls-label col-md-10">
-          <b class="ls-label-text">Nome</b>
-          {{input type="text" value=model.nome autofocus=true pattern="gororoba" placeholder="Nome e sobrenome"}}
-        </label>
-        <label class="ls-label col-md-10">
-          <b class="ls-label-text">Cargo</b>
-          {{input type="text" value=model.cargo placeholder="Cargo ou função"}}
-        </label>
-        <label class="ls-label col-md-10">
-          <b class="ls-label-text">Email</b>
-          {{input type="text" value=model.email placeholder="email corporativo"}}
-        </label>
-        <label class="ls-label col-md-6">
-          <b class="ls-label-text">Telefone</b>
-          {{input type="text" value=model.telefone placeholder="Telefone fixo"}}
-        </label>
-        <label class="ls-label col-md-6">
-          <b class="ls-label-text">Ramal</b>
-          {{input type="text" value=model.ramal placeholder="ramal"}}
-        </label>
-        <label class="ls-label col-md-6">
-          <b class="ls-label-text">Celular</b>
-          {{input type="text" value=model.celular placeholder="telefone móvel"}}
-        </label>
-        <label class="ls-label col-md-6">
-          <b class="ls-label-text">Skype</b>
-          {{input type="text" value=model.skype placeholder="telefone móvel"}}
-        </label>
-      </fieldset>
-    </form>
+<div class="ls-centered">
+  <div class="blank col-md-1"></div>
+  <div id="text-explanation" class="margin-top ls-no-margin-bottom col-md-9 ls-text-lg ls-box ls-no-border ls-txt-justify">
+    <p class="ls-text-lg"><strong>Subskribo</strong> é uma aplicação simples que permite padronizar assinaturas de email, bastando
+    para isso apenas preencher os dados da assinatura e escolher o template desejado.</p>
+    <p class="ls-text-lg">No caso do template utilizar imagens, é preciso cadastrar um avatar no <a href="http://gravatar.com" target="_blank">Gravatar</a>.</p>
   </div>
+  <div class="blank col-md-1"></div>
+</div>
 
-  <div id="right-colum" class="col-md-6 ls-box col">
-    <div id="tabs-section">
-      <ul class="ls-tabs-nav">
-        <li class="ls-active"><a data-ls-module="tabs" href="#locaweb-sig">Locaweb</a></li>
-        <li><a data-ls-module="tabs" href="#locawebcorp-sig">Locaweb Corp</a></li>
-        <li><a data-ls-module="tabs" href="#allin-sig">AllIn</a></li>
-      </ul>
-      <div class="ls-tabs-container">
-        {{!-- template de assinatura da locaweb --}}
-        <div id="locaweb-sig" class="ls-tab-content ls-active">
-          {{locaweb-signature dados = model}}
+<div id="content" class="col-md-12">
+
+  <div id="border-div" class="ls-box">
+    <div id="left-colum" class="col-md-6 ls-sm-space col">
+      <form action="" class="ls-form row">
+        <fieldset>
+          <label class="ls-label col-md-10">
+            <b class="ls-label-text">Nome</b>
+            {{input type="text" value=model.nome autofocus=true pattern="gororoba" placeholder="Nome e sobrenome"}}
+          </label>
+          <label class="ls-label col-md-10">
+            <b class="ls-label-text">Cargo</b>
+            {{input type="text" value=model.cargo placeholder="Cargo ou função"}}
+          </label>
+          <label class="ls-label col-md-6">
+            <b class="ls-label-text">Email</b>
+            {{input type="text" value=model.email placeholder="email corporativo"}}
+          </label>
+          <label class="ls-label col-md-6">
+            <b class="ls-label-text">Telefone</b>
+            {{input type="text" value=model.telefone placeholder="Telefone fixo"}}
+          </label>
+          <label class="ls-label col-md-6">
+            <b class="ls-label-text">Ramal</b>
+            {{input type="text" value=model.ramal placeholder="ramal"}}
+          </label>
+          <label class="ls-label col-md-6">
+            <b class="ls-label-text">Celular</b>
+            {{input type="text" value=model.celular placeholder="telefone móvel"}}
+          </label>
+          <label class="ls-label col-md-6">
+            <b class="ls-label-text">Skype</b>
+            {{input type="text" value=model.skype placeholder="telefone móvel"}}
+          </label>
+        </fieldset>
+      </form>
+    </div>
+
+    <div id="right-colum" class="col-md-6 ls-box col">
+      <h3 class="ls-title-3">Preview</h3>
+      <br>
+      <div id="tabs-section">
+        <ul class="ls-tabs-nav">
+          <li class="ls-active"><a data-ls-module="tabs" href="#locaweb-sig">Locaweb</a></li>
+          <li><a data-ls-module="tabs" href="#locawebcorp-sig">Locaweb Corp</a></li>
+          <li><a data-ls-module="tabs" href="#allin-sig">AllIn</a></li>
+        </ul>
+        <div class="ls-tabs-container">
+          {{!-- template de assinatura da locaweb --}}
+          <div id="locaweb-sig" class="ls-tab-content preview ls-active">
+            {{locaweb-signature dados = model}}
+          </div>
+
+          {{!-- template de assinatura da locaweb corp--}}
+          <div id="locawebcorp-sig" class="ls-tab-content preview">
+            {{locawebcorp-signature dados = model}}
+          </div>
+
+          {{!-- template de assinatura da locaweb corp--}}
+          <div id="allin-sig" class="ls-tab-content preview">
+            {{allin-signature dados = model}}
+          </div>
         </div>
+      </div>
 
-        {{!-- template de assinatura da locaweb corp--}}
-        <div id="locawebcorp-sig" class="ls-tab-content">
-          {{locawebcorp-signature dados = model}}
-        </div>
+      <div id="col-right-bottom">
+        {{!-- <a id="clipboard-btn" href="#" data-clipboard-target=".ls-tab-content.preview.ls-active" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência">Copiar
+          <img class="ico" src="Octicons-clippy.svg" alt="Copiar para a Área de transferência">
+        </a> --}}
+        {{#copy-button clipboardTarget=".ls-tab-content.preview.ls-active" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência" success="success" error="error"}}Copiar
+        {{/copy-button}}
+        {{!-- lista de instruções de uso --}}
+        <div class="ls-list ls-no-border">
+          <header class="ls-list-header">
+            <div class="col-md-12 ls-no-padding-left">
+              <div class="ls-list-title">
+                <strong>Instruções</strong>
+              </div>
 
-        {{!-- template de assinatura da locaweb corp--}}
-        <div id="allin-sig" class="ls-tab-content">
-          {{allin-signature dados = model}}
+              <div class="ls-list-description">
+                <p>Para ter a sua assinatura de email, basta preencher seus dados no formulário ao lado e então,
+                  <strong>copiar</strong> o conteúdo para a área de transferência <strong>clicando no botão acima</strong>
+                   e configurando a assinatura no seu cliente de email:
+                </p>
+                <ul>
+                  <li><a href="https://support.office.com/pt-br/article/Adicionar-uma-assinatura-a-mensagens-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2" target="_blank">Outlook</a></li>
+                  <li><a href="https://support.office.com/pt-br/article/Criar-e-adicionar-uma-assinatura-de-email-no-Outlook-Web-App-0f230564-11b9-4239-83de-f10cbe4dfdfc#__toc376872538" target="_blank">Outlook Web</a></li>
+                  <li><a href="https://support.mozilla.org/pt-BR/kb/assinaturas#w_assinaturas-html" target="_blank">Thunderbird</a></li>
+                  <li><a href="https://support.apple.com/kb/PH22287?viewlocale=pt_BR&locale=en_US" target="_blank">Apple Mail</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
         </div>
       </div>
     </div>
-
-    <a href="#" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência">Copiar
-      <img class="ico" src="Octicons-clippy.svg" alt="Copiar para a Área de transferência">
-    </a>
-
   </div>
 </div>
 
