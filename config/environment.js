@@ -16,6 +16,16 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' assets.locaweb.com.br",
+      'font-src': "'self' assets.locaweb.com.br fonts.gstatic.com",
+      'connect-src': "'self'",
+      'img-src': "'self' assets.locaweb.com.br www.gravatar.com htmlsig.com www.companysig.com",
+      'style-src': "'self' 'unsafe-inline' assets.locaweb.com.br fonts.googleapis.com",
+      'media-src': "'self'"
     }
   };
 
