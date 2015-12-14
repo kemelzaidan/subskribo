@@ -1,9 +1,10 @@
 <div id="text-explanation" class="margin-top">
   <div class="blank col-md-1"></div>
   <div class="ls-no-margin-bottom col-md-9 ls-text-lg ls-box ls-md-space ls-no-border ls-txt-justify">
-    <p class="ls-text-lg"><strong>Subskribo</strong> é uma aplicação simples que permite padronizar assinaturas de email, bastando
-    para isso apenas preencher os dados da assinatura e escolher o template desejado.</p>
-    <p class="ls-text-lg">No caso do template utilizar imagens, é preciso cadastrar um avatar no <a href="http://gravatar.com" target="_blank">Gravatar</a>.</p>
+    <p class="ls-text-lg"><strong>Subskribo</strong> é uma aplicação simples que permite padronizar assinaturas de email bastando,
+    para isso, apenas preencher os dados da assinatura e escolher o template desejado.</p>
+    <p class="ls-text-lg">No caso do template utilizar uma imagem pessoal, é preciso cadastrar um avatar no
+      <a href="http://gravatar.com" target="_blank">Gravatar</a> com o email utilizado.</p>
   </div>
   <div class="blank col-md-1"></div>
 </div>
@@ -74,11 +75,12 @@
       </div>
 
       <div id="col-right-bottom">
-        {{!-- <a id="clipboard-btn" href="#" data-clipboard-target=".ls-tab-content.preview.ls-active" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência">Copiar
+        {{!-- copy-button - I had to change and vendor the ember-cli-clipboard in order to do what is described here:
+        https://github.com/zenorocha/clipboard.js/issues/72 --}}
+        {{#copy-button clipboardText=".ls-tab-content.preview.ls-active > div" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência" success="success" error="error"}}Copiar
           <img class="ico" src="Octicons-clippy.svg" alt="Copiar para a Área de transferência">
-        </a> --}}
-        {{#copy-button clipboardTarget=".ls-tab-content.preview.ls-active" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência" success="success" error="error"}}Copiar
         {{/copy-button}}
+
         {{!-- lista de instruções de uso --}}
         <div class="ls-list ls-no-border">
           <header class="ls-list-header">

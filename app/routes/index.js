@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   // this.route('index', { path: '/' });
-  model(params) {
+  model() {
     return Ember.Object.create ({
       nome: "Kemel Zaidan",
       cargo: "Evangelista locaweb",
@@ -11,6 +11,6 @@ export default Ember.Route.extend({
       ramal: "270",
       celular: "11 97174-0000",
       skype: "kemel_zaidan"
-    })
+    });
   }
 });
