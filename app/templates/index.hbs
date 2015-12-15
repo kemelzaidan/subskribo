@@ -1,10 +1,13 @@
 <div id="text-explanation" class="margin-top">
   <div class="blank col-md-1"></div>
   <div class="ls-no-margin-bottom col-md-9 ls-text-lg ls-box ls-md-space ls-no-border ls-txt-justify">
-    <p class="ls-text-lg"><strong>Subskribo</strong> é uma aplicação simples que permite padronizar assinaturas de email bastando,
-    para isso, apenas preencher os dados da assinatura e escolher o template desejado.</p>
-    <p class="ls-text-lg">No caso do template utilizar uma imagem pessoal, é preciso cadastrar um avatar no
-      <a href="http://gravatar.com" target="_blank">Gravatar</a> com o email utilizado.</p>
+    <p class="ls-text-lg"><strong>Subskribo</strong> é uma aplicação simples que
+    permite padronizar <strong>assinaturas de email</strong> bastando, para
+    isso, apenas preencher os dados da assinatura e escolher o template
+    desejado.</p>
+    <p class="ls-text-lg">No caso do template utilizar uma imagem pessoal, é
+    preciso cadastrar um avatar no <a href="http://gravatar.com" target="_blank">
+    Gravatar</a> com o email utilizado.</p>
   </div>
   <div class="blank col-md-1"></div>
 </div>
@@ -77,7 +80,7 @@
       <div id="col-right-bottom">
         {{!-- copy-button - I had to change and vendor the ember-cli-clipboard in order to do what is described here:
         https://github.com/zenorocha/clipboard.js/issues/72 --}}
-        {{#copy-button clipboardText=".ls-tab-content.preview.ls-active > div" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência" success="success" error="error"}}Copiar
+        {{#copy-button clipboardText=".ls-tab-content.preview.ls-active > div" class="ls-tooltip-bottom ls-btn-lg" aria-label="Copiar para a área de transferência" success='sucess' error="error"}}Copiar
           <img class="ico" src="Octicons-clippy.svg" alt="Copiar para a Área de transferência">
         {{/copy-button}}
 
@@ -90,15 +93,17 @@
               </div>
 
               <div class="ls-list-description">
-                <p>Para ter a sua assinatura de email, basta preencher seus dados no formulário ao lado e então,
-                  <strong>copiar</strong> o conteúdo para a área de transferência <strong>clicando no botão acima</strong>
-                   e configurando a assinatura no seu cliente de email:
-                </p>
+                <p>Para ter a sua assinatura de email, basta preencher seus
+                dados no formulário ao lado e então, <strong>copiar</strong> o
+                conteúdo para a área de transferência <strong>clicando no botão
+                acima</strong> e configurando a assinatura no seu cliente de
+                email:</p>
                 <ul>
                   <li><a href="https://support.office.com/pt-br/article/Adicionar-uma-assinatura-a-mensagens-8ee5d4f4-68fd-464a-a1c1-0e1c80bb27f2" target="_blank">Outlook</a></li>
                   <li><a href="https://support.office.com/pt-br/article/Criar-e-adicionar-uma-assinatura-de-email-no-Outlook-Web-App-0f230564-11b9-4239-83de-f10cbe4dfdfc#__toc376872538" target="_blank">Outlook Web</a></li>
                   <li><a href="https://support.mozilla.org/pt-BR/kb/assinaturas#w_assinaturas-html" target="_blank">Thunderbird</a></li>
                   <li><a href="https://support.apple.com/kb/PH22287?viewlocale=pt_BR&locale=en_US" target="_blank">Apple Mail</a></li>
+                  <li><a href="http://wiki.locaweb.com.br/pt-br/Assinatura_-_Webmail" target="_blank">Locamail</a></li>
                 </ul>
               </div>
             </div>

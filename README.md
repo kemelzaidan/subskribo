@@ -1,7 +1,17 @@
 # Subskribo
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Subskribo is a simple Ember application to automate the process of creating a
+default email signature on corporate environments. Originally created to
+Locaweb (Brazil's largest hosting company), it can be customized to other
+company needs with the same purpose, since it is released under Affero GPL 3
+(take a look at the LICENSE.txt file for the complete license).
+
+The user just needs to fill the form with its own information and click on the
+copy button in order to copy the entire HTML signature code to the clipboard
+before pasting it on the email client.
+
+The name _Subskribo_ comes from the [Esperanto](https://en.wikipedia.org/wiki/Esperanto)
+ word for "signature".
 
 ## Prerequisites
 
@@ -15,7 +25,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/kemelzaidan/subskribo` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -23,11 +33,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+* Visit the app at [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
 
@@ -41,13 +47,5 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Run the production command above, setup a web server and deploy the files
+generated at the `dist` folder to the server. Done!
