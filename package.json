@@ -1,7 +1,7 @@
 {
   "name": "subskribo",
-  "version": "0.0.0",
-  "description": "Small description for subskribo goes here",
+  "version": "1.0.0",
+  "description": "Small ember application to dynamically create email signatures",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,12 +12,12 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": "https://github.com/kemelzaidan/subskribo.git",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 5.2.0"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "Kemel Zaidan <kemel.zaidan@locaweb.com.br>",
+  "license": "AGPL",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
     "ember-cli": "1.13.13",

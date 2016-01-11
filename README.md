@@ -1,19 +1,20 @@
 # Subskribo
 
 Subskribo is a simple Ember application to automate the process of creating a
-default email signature on corporate environments. Originally created to
-Locaweb (Brazil's largest hosting company), it can be customized to other
-company needs with the same purpose, since it is released under Affero GPL 3
-(take a look at the LICENSE.txt file for the complete license).
+default email signature on corporate environments. The user just needs to fill
+the form with its own information and click on the copy button in order to copy
+the entire HTML signature code to the clipboard before pasting it on the email
+client.
 
-The user just needs to fill the form with its own information and click on the
-copy button in order to copy the entire HTML signature code to the clipboard
-before pasting it on the email client.
+Originally created to Locaweb (Brazil's largest hosting company), it can be
+customized to other company needs with the same purpose, since it is released
+under Affero GPL 3 (take a look at the LICENSE.txt file for the complete
+license).
 
-The name _Subskribo_ comes from the [Esperanto](https://en.wikipedia.org/wiki/Esperanto)
+The name *Subskribo* comes from the [Esperanto](https://en.wikipedia.org/wiki/Esperanto)
  word for "signature".
 
-## Prerequisites
+## Development Prerequisites
 
 You will need the following things properly installed on your computer.
 
