@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   model() {
     return Ember.Object.create ({
       nome: "Kemel Zaidan",
-      cargo: "Evangelista locaweb",
+      cargo: "Evangelista Locaweb",
       email: "kemel.zaidan@locaweb.com.br",
       telefone: "11 3544-0444",
       ramal: "270",
