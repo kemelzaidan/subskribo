@@ -19,10 +19,10 @@ The name *Subskribo* comes from the [Esperanto](https://en.wikipedia.org/wiki/Es
 You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
+* [Node.js](http://nodejs.org/) (>= v5.2.0 with NPM)
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* [PhantomJS](http://phantomjs.org/) - to run tests
 
 ## Installation
 
