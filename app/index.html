@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="ls-main-full ls-theme-light-red">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Subskribo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for 'head'}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/subskribo.css">
+    <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/3.8.2/stylesheets/locastyle.css">
+
+    {{content-for 'head-footer'}}
+  </head>
+  <body>
+    <!-- <main class="ls-main"></main> -->
+    {{content-for 'body'}}
+
+    <script src="assets/vendor.js"></script>
+    <script src="assets/subskribo.js"></script>
+    <script src="//assets.locaweb.com.br/locastyle/3.8.2/javascripts/locastyle.js"></script>
+
+    {{content-for 'body-footer'}}
+  </body>
+</html>
